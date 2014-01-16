@@ -1,0 +1,8 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #cc5533;
+  background: radial-gradient(#d16647, #b84c2e);
+}

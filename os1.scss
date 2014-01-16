@@ -1,0 +1,11 @@
+$color-fg: #fff;
+$color-bg: #c53;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: $color-bg;
+  background: radial-gradient(lighten($color-bg, 5%), darken($color-bg, 5%));
+}
