@@ -5,7 +5,7 @@ html, body {
   height: 100%;
   display: table;
   background: #cc5533;
-  background: radial-gradient(#d16647, #b84c2e);
+  background: radial-gradient(#d06343, #ab472b);
 }
 
 .animation-container {
@@ -15,7 +15,7 @@ html, body {
 
 .diagonal-up, .diagonal-down {
   width: 100px;
-  height: 16px;
+  height: 12px;
   background: white;
 }
 
@@ -36,28 +36,42 @@ html, body {
 }
 
 .crest, .trough {
-  border: 16px solid white;
+  border: 12px solid white;
   border-radius: 50%;
   width: 100px;
   height: 50px;
 }
 
 .crest {
-  border-width: 16px 0 0 0;
+  border-width: 12px 0 0 0;
 }
 
 .trough {
-  border-width: 0 0 16px 0;
+  border-width: 0 0 12px 0;
+}
+
+.glow {
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.32), 0 0 24px rgba(255, 255, 255, 0.32) inset;
+}
+
+.final-circle {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  border: 12px solid white;
+  margin: 0 auto;
+  cursor: pointer;
 }
 
 .shadow {
   border-radius: 50%;
   height: 148px;
-  width: 240px;
-  -webkit-transform: scaleY(0.32);
-  -moz-transform: scaleY(0.32);
-  -ms-transform: scaleY(0.32);
-  -o-transform: scaleY(0.32);
-  transform: scaleY(0.32);
+  width: 252px;
+  -webkit-transform: scaleY(0.4);
+  -moz-transform: scaleY(0.4);
+  -ms-transform: scaleY(0.4);
+  -o-transform: scaleY(0.4);
+  transform: scaleY(0.4);
   box-shadow: 0px 220px 32px -40px rgba(0, 0, 0, 0.12);
+  margin: 0 auto;
 }
