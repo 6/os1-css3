@@ -41,3 +41,7 @@ $prefix-for-spec:      true !default; // required for keyframe mixin
 @mixin transform($property: none) {
   @include prefixer(transform, $property, webkit moz ms o spec);
 }
+
+@mixin backface-visibility($property: none) {
+  @include prefixer(backface-visibility, $property, webkit moz);
+}

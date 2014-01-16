@@ -51,7 +51,7 @@ html, body {
 }
 
 .glow {
-  box-shadow: 0 0 24px rgba(255, 255, 255, 0.24), 0 0 24px rgba(255, 255, 255, 0.24) inset;
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.28), 0 0 24px rgba(255, 255, 255, 0.28) inset;
 }
 
 .final-circle {
@@ -61,26 +61,33 @@ html, body {
   border: 12px solid #f2f2f2;
   margin: 0 auto;
   cursor: pointer;
-  transition: box-shadow 0.4s ease-out, border-color 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 .final-circle:hover {
   border-color: white;
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.4), 0 0 40px rgba(255, 255, 255, 0.4) inset;
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  -ms-transform: translateY(8px);
+  -o-transform: translateY(8px);
+  transform: translateY(8px);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.72), 0 0 40px rgba(255, 255, 255, 0.72) inset;
 }
 .final-circle:hover + .shadow {
-  box-shadow: 0px 220px 32px -40px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 148px 56px -40px rgba(0, 0, 0, 0.16);
 }
 
 .shadow {
   border-radius: 50%;
-  height: 148px;
+  height: 160px;
   width: 252px;
   -webkit-transform: scaleY(0.4);
   -moz-transform: scaleY(0.4);
   -ms-transform: scaleY(0.4);
   -o-transform: scaleY(0.4);
   transform: scaleY(0.4);
-  box-shadow: 0px 220px 32px -40px rgba(0, 0, 0, 0.12);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  box-shadow: 0px 148px 56px -40px rgba(0, 0, 0, 0.12);
   margin: 0 auto;
   transition: box-shadow 0.4s ease-out;
 }

@@ -52,7 +52,7 @@ html, body {
 }
 
 .glow {
-  box-shadow: 0 0 24px rgba(255, 255, 255, 0.24), 0 0 24px rgba(255,255,255,0.24) inset;
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.28), 0 0 24px rgba(255,255,255,0.28) inset;
 }
 
 .final-circle {
@@ -62,22 +62,24 @@ html, body {
   border: $width-line solid $color-fg-inactive;
   margin: 0 auto;
   cursor: pointer;
-  transition: box-shadow $transition-hover, border-color $transition-hover;
+  transition: all $transition-hover;
   &:hover {
     border-color: $color-fg;
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.4), 0 0 40px rgba(255,255,255, 0.4) inset;
+    @include transform(translateY(8px));
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.72), 0 0 40px rgba(255,255,255, 0.72) inset;
     &+.shadow {
-      box-shadow: 0px 220px 32px -40px rgba(0, 0, 0, 0.16);
+      box-shadow: 0px 148px 56px -40px rgba(0, 0, 0, 0.16);
     }
   }
 }
 
 .shadow {
   border-radius: 50%;
-  height: 148px;
+  height: 160px;
   width: 252px;
   @include transform(scaleY(0.4));
-  box-shadow: 0px 220px 32px -40px rgba(0, 0, 0, 0.12);
+  @include backface-visibility(hidden);
+  box-shadow: 0px 148px 56px -40px rgba(0, 0, 0, 0.12);
   margin: 0 auto;
   transition: box-shadow $transition-hover;
 }
