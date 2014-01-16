@@ -14,7 +14,7 @@ html, body {
   height: 100%;
   display: table;
   background: $color-bg;
-  background: radial-gradient(lighten($color-bg, 4%), darken($color-bg, 8%));
+  background: radial-gradient(lighten($color-bg, 6%), darken($color-bg, 10%));
 }
 
 .animation-container {
