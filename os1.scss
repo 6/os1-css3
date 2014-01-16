@@ -1,7 +1,7 @@
 @import "mixins";
 
 $color-fg: #fff;
-$color-fg-inactive: whitesmoke;
+$color-fg-inactive: darken($color-fg, 5%);
 $color-bg: #c53;
 $angle: 40deg;
 $width-line: 12px;
@@ -52,7 +52,7 @@ html, body {
 }
 
 .glow {
-  box-shadow: 0 0 24px rgba(255, 255, 255, 0.32), 0 0 24px rgba(255,255,255,0.32) inset;
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.24), 0 0 24px rgba(255,255,255,0.24) inset;
 }
 
 .final-circle {
@@ -65,7 +65,7 @@ html, body {
   transition: box-shadow $transition-hover, border-color $transition-hover;
   &:hover {
     border-color: $color-fg;
-    box-shadow: 0 0 44px rgba(255, 255, 255, 0.44), 0 0 44px rgba(255,255,255, 0.44) inset;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.4), 0 0 40px rgba(255,255,255, 0.4) inset;
     &+.shadow {
       box-shadow: 0px 220px 32px -40px rgba(0, 0, 0, 0.16);
     }
