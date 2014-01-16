@@ -16,6 +16,34 @@
     <div class="shadow"></div>
   </div>
 
+<script src="http://cdnjs.cloudflare.com/ajax/libs/howler/1.1.11/howler.min.js
+"></script>
+
+<script>
+  var assets = {},
+      assetsLoaded = 0,
+      assetsCount = 2;
+
+  var onAssetLoad = function() {
+    assetsLoaded += 1;
+    if (assetsLoaded == assetsCount) {
+      var button = document.querySelector(".final-circle"); // TODO - use an actual button instead of circle
+      button.addEventListener("click", function() {
+        assets.soundInitiate.play();
+      }, false);
+    }
+  };
+
+  assets.soundInitiate = new Howl({
+    urls: ['assets/initiate.mp3'],
+    onload: onAssetLoad
+  });
+
+  assets.soundHi = new Howl({
+    urls: ['assets/hi.mp3'],
+    onload: onAssetLoad
+  });
+</script>
 
 </body>
 </html>
