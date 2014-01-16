@@ -3,6 +3,61 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
+  display: table;
   background: #cc5533;
   background: radial-gradient(#d16647, #b84c2e);
+}
+
+.animation-container {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.diagonal-up, .diagonal-down {
+  width: 100px;
+  height: 16px;
+  background: white;
+}
+
+.diagonal-up {
+  -webkit-transform: rotate(-40deg);
+  -moz-transform: rotate(-40deg);
+  -ms-transform: rotate(-40deg);
+  -o-transform: rotate(-40deg);
+  transform: rotate(-40deg);
+}
+
+.diagonal-down {
+  -webkit-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+  transform: rotate(40deg);
+}
+
+.crest, .trough {
+  border: 16px solid white;
+  border-radius: 50%;
+  width: 100px;
+  height: 50px;
+}
+
+.crest {
+  border-width: 16px 0 0 0;
+}
+
+.trough {
+  border-width: 0 0 16px 0;
+}
+
+.shadow {
+  border-radius: 50%;
+  height: 148px;
+  width: 240px;
+  -webkit-transform: scaleY(0.32);
+  -moz-transform: scaleY(0.32);
+  -ms-transform: scaleY(0.32);
+  -o-transform: scaleY(0.32);
+  transform: scaleY(0.32);
+  box-shadow: 0px 220px 32px -40px rgba(0, 0, 0, 0.12);
 }
