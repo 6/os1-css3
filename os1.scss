@@ -3,7 +3,7 @@
 $color-fg: #fff;
 $color-fg-inactive: darken($color-fg, 5%);
 $color-bg: #c53;
-$angle: 40deg;
+$angle: 45deg;
 $width-line: 12px;
 $transition-hover: 0.4s ease-out;
 
@@ -22,6 +22,10 @@ html, body {
   vertical-align: middle;
 }
 
+.diagonal-up, .diagonal-down, .crest, .trough {
+  display: inline-block;
+}
+
 .diagonal-up, .diagonal-down {
   width: 100px;
   height: $width-line;
@@ -29,26 +33,30 @@ html, body {
 }
 
 .diagonal-up {
-  @include transform(rotate(-#{$angle}));
+  @include transform(rotate(-#{$angle}) translate(5px, 5px));
+  margin-left: -28px;
 }
 
 .diagonal-down {
-  @include transform(rotate(#{$angle}));
+  @include transform(rotate(#{$angle}) translate(-5px, 5px));
 }
 
 .crest, .trough {
   border: $width-line solid $color-fg;
-  border-radius: 50%;
-  width: 100px;
-  height: 50px;
+  width: 76px;
+  height: 76px;
 }
 
 .crest {
-  border-width: $width-line 0 0 0;
+  @include transform(rotate($angle));
+  border-top-left-radius: 100%;
+  border-width: $width-line 0 0 $width-line;
 }
 
 .trough {
-  border-width: 0 0 $width-line 0;
+  @include transform(rotate($angle) translate(43px, 63px));
+  border-bottom-right-radius: 100%;
+  border-width: 0 $width-line $width-line 0;
 }
 
 .glow {

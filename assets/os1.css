@@ -13,6 +13,10 @@ html, body {
   vertical-align: middle;
 }
 
+.diagonal-up, .diagonal-down, .crest, .trough {
+  display: inline-block;
+}
+
 .diagonal-up, .diagonal-down {
   width: 100px;
   height: 12px;
@@ -20,34 +24,46 @@ html, body {
 }
 
 .diagonal-up {
-  -webkit-transform: rotate(-40deg);
-  -moz-transform: rotate(-40deg);
-  -ms-transform: rotate(-40deg);
-  -o-transform: rotate(-40deg);
-  transform: rotate(-40deg);
+  -webkit-transform: rotate(-45deg) translate(5px, 5px);
+  -moz-transform: rotate(-45deg) translate(5px, 5px);
+  -ms-transform: rotate(-45deg) translate(5px, 5px);
+  -o-transform: rotate(-45deg) translate(5px, 5px);
+  transform: rotate(-45deg) translate(5px, 5px);
+  margin-left: -28px;
 }
 
 .diagonal-down {
-  -webkit-transform: rotate(40deg);
-  -moz-transform: rotate(40deg);
-  -ms-transform: rotate(40deg);
-  -o-transform: rotate(40deg);
-  transform: rotate(40deg);
+  -webkit-transform: rotate(45deg) translate(-5px, 5px);
+  -moz-transform: rotate(45deg) translate(-5px, 5px);
+  -ms-transform: rotate(45deg) translate(-5px, 5px);
+  -o-transform: rotate(45deg) translate(-5px, 5px);
+  transform: rotate(45deg) translate(-5px, 5px);
 }
 
 .crest, .trough {
   border: 12px solid white;
-  border-radius: 50%;
-  width: 100px;
-  height: 50px;
+  width: 76px;
+  height: 76px;
 }
 
 .crest {
-  border-width: 12px 0 0 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-top-left-radius: 100%;
+  border-width: 12px 0 0 12px;
 }
 
 .trough {
-  border-width: 0 0 12px 0;
+  -webkit-transform: rotate(45deg) translate(43px, 63px);
+  -moz-transform: rotate(45deg) translate(43px, 63px);
+  -ms-transform: rotate(45deg) translate(43px, 63px);
+  -o-transform: rotate(45deg) translate(43px, 63px);
+  transform: rotate(45deg) translate(43px, 63px);
+  border-bottom-right-radius: 100%;
+  border-width: 0 12px 12px 0;
 }
 
 .glow {
