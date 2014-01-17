@@ -29,6 +29,9 @@
     if (assetsLoaded == assetsCount) {
       var button = document.querySelector(".final-circle"); // TODO - use an actual button instead of circle
       button.addEventListener("click", function() {
+        if (assets.soundInitiate.pos() !== 0) {
+          return; // Currently playing
+        }
         assets.soundInitiate.play();
       }, false);
     }
